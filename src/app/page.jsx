@@ -1,6 +1,7 @@
 // import sqlite3 from "sqlite3";
 // import { open } from "sqlite";
 // import groq from "@/utils/openai";
+import Head from 'next/head';
 import DownloadButton from "./components/Downloadbutton";
 export default async function Home() {
 
@@ -362,6 +363,17 @@ export default async function Home() {
 
 
   return (
-    <DownloadButton />
+    <div className="flex items-center h-screen flex-col pt-56 bg-sky-300 ">
+        <Head>
+        <title>Download SQLite Database</title>
+        </Head>
+        <h1 className="text-3xl font-semibold text-gray-100">A Serious Game to Enhance Phishing Awareness</h1>
+
+        <div className="mt-32">
+
+        
+        <DownloadButton />
+      </div>
+    </div>
   );
 }
